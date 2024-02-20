@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+{%load static%}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="">
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet">
+    <script type="text/javascript" src="https://demo.dashboardpack.com/architectui-html-free/assets/scripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/map.css'%}">
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class=""><a href="{% url 'home'%}">
+                        ROUTES
+                    </a></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <div class="widget-heading">
+
+                    </div>
+
+
+                </span>
+            </div>
+            <div class="app-header__content ">
+                <div class="app-header-left">
+                    <div class="search-wrapper">
+
+                        <button class="close"></button>
+                    </div>
+
+                </div>
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="">
+                        <div class=""><a href="{% url 'home'%}">
+                                ROUTES
+                            </a></div>
+                    </div>
+
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <div class=""><a href="{% url 'home'%}">
+                                ROUTES
+                            </a></div>
+
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">My Dashboard</li>
+                            <li>
+                                <a href="{% url 'leads'%}">
+                                    <i class="fa fa-user">
+                                    </i> View Clients
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="{% url 'map'%}">
+                                    <i class="fa fa-street-view">
+                                    </i> Maps
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Upload</li>
+                            <li>
+                                <a href="{% url 'upload' %}">
+                                    <i class="fa fa-upload"></i> Upload Excel/CSV files
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main__outer">
+
+                <div class="row">
+
+                    <div class="d-xl-none d-lg-block col-md-6 col-xl-4">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12 ">
+                        <div class="mb-3 card">
+                            <div class="card-header-tab card-header">
+                                <div class="card-header-title">
+                                    <div id="filters-container" class="row">
+                                        
+
+                                        <div class="col-md-4 pt-2 ">
+                                            <label for="city-filter" class="filter">City:</label>
+                                            <select id="city-filter" class="filter">
+                                                <option value="">All</option>
+                                                {% for city in cities %}
+                                                <option value="{{ city }}">{{ city }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4 pt-2 ">
+                                            <label for="district-filter" class="filter">District:</label>
+                                            <select id="district-filter" class="filter">
+                                                <option value="">All</option>
+                                                {% for district in districts %}
+                                                <option value="{{ district }}">{{ district }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 pt-2">
+                                            <label for="state-filter" class="filter">State</label>
+                                            <select class="filter" id="state-filter">
+                                                <option value="">All</option>
+                                                {% for state in states %}
+                                                <option>{{ state }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" tab-content">
+                                <div class=" tab-pane fade active show" id="tab-eg-55">
+                                    <div class="widget-chart p-3">
+                                        <div class="col-md-12" style="height: 600px">
+                                            <button id="calculate-directions-btn" class="btn btn-primary mb-3">Show Directions</button>
+                                            <div id='map' style='width: 100%; height: 100%;'></div>
+                                           
+                                            <script>
+
+                                                var markers = [];
+
+                                                function initMap() {
+
+                                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                                        center: { lat: 22.5839, lng: 81.2090 },
+                                                        zoom: 4.5,
+                                                        gestureHandling:"greedy"
+                                                    });
+                                                    var iconSize = new google.maps.Size(60, 60);
+                                                    var leadIcon = {
+                                                        url: '{% static 'image/lead.png' %}',
+                                                        scaledSize: iconSize
+                                                    };
+                                                    var customerIcon = {
+                                                        url: '{% static 'image/cust.png' %}',
+                                                        scaledSize: iconSize
+                                                    };
+                                                    var prospectIcon = {
+                                                        url: '{% static 'image/pros.png' %}',
+                                                        scaledSize: iconSize
+                                                    };
+                                                  
+                                                   
+                                                    {% for data in uploaded_data %}
+
+                                                        var category = '{{ data.column12_category }}'; 
+                                                        var city = "{{ data.column5_city }}";
+                                                        var state = "{{ data.column7_state }}";
+                                                        var district = "{{ data.column6_district }}";
+                                                        var category = "{{data.column12_category}}";
+                                                        var data = "{{ data.column1_name }}";
+                                                        var address = "{{data.column2_address}}";
+                                                        var marker;
+
+                                                        var marker = new google.maps.Marker({
+                                                            position: {lat:{{data.column3_latitude}},lng:{{data.column4_longitude}}},
+                                                            map: map,
+                                                            title: '{{ data.column1_name }}',
+                                                            icon: getCategoryIcon(category),
+                                                            city: city,
+                                                            state:state,
+                                                            district:district                                                       
+                                                        });
+
+                                                        
+                                                        var contentString = "<div><strong>Name:</strong> " + data + "<strong> | Category:</strong> " + category + "</div>"
+                                            
+                                                        var infowindow = new google.maps.InfoWindow({
+                                                            content: contentString
+                                                        });
+
+                                                        google.maps.event.addListener(marker, "click", (function(marker, contentString, infowindow) {
+                                                            return function() {
+                                                                infowindow.setContent(contentString);
+                                                                infowindow.open(map, marker);
+                                                            };
+                                                        })(marker, contentString, infowindow));
+
+
+                                                        markers.push(marker);
+
+                                                    {% endfor %}
+
+                                                    function getCategoryIcon(category) {
+                                                        switch(category) {
+                                                            case 'lead':
+                                                                return leadIcon;
+                                                            case 'customer':
+                                                                return customerIcon;
+                                                            case 'prospect':
+                                                                return prospectIcon;
+                                                            default:
+                                                                return null;
+                                                        }
+                                                    }
+
+                                                    function filterMarkersByCity(selectedCity) {
+                                                        
+                                                        var bounds = new google.maps.LatLngBounds();
+                                                        for (var i = 0; i < markers.length; i++) {
+                                                            var marker = markers[i];
+                                                            var markerCity = marker.city;
+                                                            if (selectedCity === '' || markerCity === selectedCity) {
+                                                                marker.setVisible(true);
+                                                                bounds.extend(marker.getPosition());
+                                                            } else {
+                                                                marker.setVisible(false);
+                                                            }
+                                                        }
+                                                        
+                                                        if (!bounds.isEmpty()) {
+
+                                                            map.fitBounds(bounds);
+                                                        }
+                                                    }
+
+                                                    
+
+                                                    function filterMarkersByState(selectedState) {
+
+                                                        var bounds = new google.maps.LatLngBounds();
+                                                        for (var i = 0; i < markers.length; i++) {
+                                                            var marker = markers[i];
+                                                            var markerState = marker.state; 
+
+                                                            if (selectedState === '' || markerState === selectedState) {
+                                                                marker.setVisible(true);
+                                                                bounds.extend(marker.getPosition());
+                                                            } else {
+                                                                marker.setVisible(false);
+                                                            }
+                                                            if (!bounds.isEmpty()) {
+                                                                map.fitBounds(bounds);
+                                                            }
+                                                        }
+                                                    }
+
+                                                    function filterMarkersByDistrict(selectedDistrict) {
+
+                                                        var bounds = new google.maps.LatLngBounds();
+
+                                                        for (var i = 0; i < markers.length; i++) {
+                                                            var marker = markers[i];
+                                                            var markerDistrict = marker.district;
+                                                            if (selectedDistrict === '' || markerDistrict === selectedDistrict) {
+                                                                marker.setVisible(true);
+                                                                bounds.extend(marker.getPosition());
+                                                            } else {
+                                                                marker.setVisible(false);
+                                                            }
+                                                            if (!bounds.isEmpty()) {
+                                                                map.fitBounds(bounds);
+                                                            }
+                                                            
+                                                        }
+                                                    }
+                                                    
+                                                    document.getElementById('city-filter').addEventListener('change', function() {
+                                                        var selectedCity = this.value;
+                                                        filterMarkersByCity(selectedCity);
+                                                        if (selectedCity) {
+                                                            document.getElementById('state-filter').value = '';
+                                                            document.getElementById('district-filter').value = '';
+                                                        }
+                                                    });
+                                                    
+                                                    document.getElementById('state-filter').addEventListener('change', function() {
+                                                        var selectedState = this.value;
+                                                        filterMarkersByState(selectedState);
+                                                        if (selectedState) {
+                                                            document.getElementById('city-filter').value = '';
+                                                            document.getElementById('district-filter').value = '';
+                                                        }
+                                                    });
+                                                    
+                                                    document.getElementById('district-filter').addEventListener('change', function() {
+                                                        var selectedDistrict = this.value;
+                                                        filterMarkersByDistrict(selectedDistrict);
+                                                        if (selectedDistrict) {
+                                                            document.getElementById('city-filter').value = '';
+                                                            document.getElementById('state-filter').value = '';
+                                                        }
+                                                    });
+
+                                                    function calculateDirections(locations) {
+
+                                                        var directionsService = new google.maps.DirectionsService();
+                                                        var directionsDisplay = new google.maps.DirectionsRenderer({
+                                                            suppressMarkers: true,
+                                                            polylineOptions: {
+                                                                strokeColor: '#0000FF',
+                                                                strokeWeight: 5
+                                                            }
+                                                        });
+
+                                                        directionsDisplay.setMap(map);
+                                                    
+                                                        var waypoints = [];
+                                                    
+                                                      
+                                                        for (var i = 0; i < locations.length ; i++) {
+
+                                                            waypoints.push({
+                                                                location: locations[i],
+                                                                stopover: true
+                                                            });
+                                                        }
+                                                    
+                                                        var request = {
+                                                            origin: locations[0],
+                                                            destination: locations[locations.length - 1],
+                                                            waypoints: waypoints,
+                                                            optimizeWaypoints: true,
+                                                            travelMode: 'DRIVING'
+                                                        };
+                                                    
+                                                        directionsService.route(request, function(response, status) {
+
+                                                            if (status == 'OK') {
+                                                                directionsDisplay.setDirections(response);
+                                                            } else {
+                                                                window.alert('Directions request failed due to ' + status);
+                                                            }
+                                                        });
+                                                    } 
+
+                                                    document.getElementById('calculate-directions-btn').addEventListener('click', function() {
+                                                        
+                                                        var selectedCity = document.getElementById('city-filter').value;
+                                                        var selectedState = document.getElementById('state-filter').value;
+                                                        var selectedDistrict = document.getElementById('district-filter').value;
+
+                                                        var locations = [];
+                                                    
+                                                        
+                                                        for (var i = 0; i < markers.length; i++) {
+
+                                                            if (markers[i].city === selectedCity || markers[i].state === selectedState || markers[i].district === selectedDistrict) {
+
+                                                                locations.push(markers[i].getPosition());
+                                                            }
+                                                        }
+                                                    
+                                                        if (locations.length > 1) {
+
+                                                            calculateDirections(locations);
+
+                                                        } else {
+                                                            alert('Not enough locations in the selected city to calculate directions.');
+                                                        }
+                                                    });
+
+
+
+
+                                                  }
+
+
+                                            </script>
+                                            
+
+                                        </div>
+                                        <div class="widget-chart-content text-center mt-5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=your api key&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_commutes_v2_c:292" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+  #state-filter{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    outline: 0;
+    background: #7de279;
+    color: #070707;
+    border: 1px solid  #7de279;
+    padding: 4px;
+    border-radius: 9px;
+  }
+#city-filter{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    outline: 0;
+    background: #54a4dd;
+    color: #070707;
+    border: 1px solid  #54a4dd;
+    padding: 4px;
+    border-radius: 9px;
+}
+#district-filter{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    outline: 0;
+    background: #f08d76;
+    color: #070707;
+    border: 1px solid  #f08d76;
+    padding: 4px;
+    border-radius: 9px;
+}
